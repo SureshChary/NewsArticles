@@ -25,10 +25,14 @@ class ArticlesViewController: BaseViewController {
         self.navigationItem.title = "Most Viewed Articles"
         // Do any additional setup after loading the view.
        
+        articletableView.accessibilityIdentifier = "TheTable"
+        articletableView.isAccessibilityElement = true
+
         articletableView.estimatedRowHeight = 120
         articletableView.rowHeight = UITableView.automaticDimension
         articletableView.dataSource = self;
         handleArticleResponse()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,7 +74,10 @@ extension ArticlesViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell") as! ArticleTableViewCell
         cell.articleResult = articlelist[indexPath.row]
-        cell.selectionStyle = .none
+        cell.accessibilityLabel = "TheCell"
+        cell.accessibilityIdentifier = "TheCell"
+        cell.isAccessibilityElement = true
+       // cell.selectionStyle = .none
         return cell
     }
 }

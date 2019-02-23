@@ -13,7 +13,7 @@
         <!--Articles View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ArticlesViewController" customModule="NewsArticles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticlesViewController" id="BYZ-38-t0r" customClass="ArticlesViewController" customModule="NewsArticles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,18 +49,29 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V29-r7-TLM">
                                                     <rect key="frame" x="119" y="16" width="205" height="20.5"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES"/>
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKn-nS-pPG">
                                                     <rect key="frame" x="119" y="41.5" width="205" height="20.5"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES"/>
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-p9-Yvk" customClass="AsyncImageLoader" customModule="NewsArticles" customModuleProvider="target">
                                                     <rect key="frame" x="25" y="41" width="79" height="93"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -81,6 +92,10 @@
                                                 <constraint firstItem="V29-r7-TLM" firstAttribute="width" secondItem="1MB-bA-YZg" secondAttribute="width" multiplier="0.6" id="wwk-Pn-930"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" label="TheCell">
+                                            <accessibilityTraits key="traits" image="YES" staticText="YES" allowsDirectInteraction="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="articleDate" destination="sxH-vr-rnL" id="KJm-EP-LnF"/>
                                             <outlet property="articleDescription" destination="xKn-nS-pPG" id="Qz9-fW-X72"/>
@@ -98,6 +113,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ebn-yN-mwX" secondAttribute="trailing" id="MQY-HK-Xne"/>
                             <constraint firstItem="Ebn-yN-mwX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P0c-mO-MLk"/>
@@ -174,6 +193,9 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="xzd-lO-Qoc" firstAttribute="top" secondItem="8fL-iW-V7a" secondAttribute="top" constant="5" id="003-4X-7Wm"/>
                             <constraint firstItem="8fL-iW-V7a" firstAttribute="trailing" secondItem="tnZ-P3-Jsw" secondAttribute="trailing" constant="30" id="33h-0e-Pfc"/>

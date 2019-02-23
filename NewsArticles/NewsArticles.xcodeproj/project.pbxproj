@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA30B31B222063AE00D8E69B /* WebAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B31A222063AE00D8E69B /* WebAPITests.swift */; };
+		EA30B31F22206A7700D8E69B /* StacticArticleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = EA30B31E22206A7700D8E69B /* StacticArticleJSON.json */; };
 		EAA18BDD221CE26300D60683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA18BDC221CE26300D60683 /* AppDelegate.swift */; };
 		EAA18BE2221CE26300D60683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA18BE0221CE26300D60683 /* Main.storyboard */; };
 		EAA18BE5221CE26300D60683 /* NewsArticles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAA18BE3221CE26300D60683 /* NewsArticles.xcdatamodeld */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA30B31A222063AE00D8E69B /* WebAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPITests.swift; sourceTree = "<group>"; };
+		EA30B31E22206A7700D8E69B /* StacticArticleJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StacticArticleJSON.json; sourceTree = "<group>"; };
 		EAA18BD9221CE26300D60683 /* NewsArticles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsArticles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA18BDC221CE26300D60683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA18BE1221CE26300D60683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				EAA18BE8221CE26800D60683 /* LaunchScreen.storyboard */,
 				EAA18BEB221CE26800D60683 /* Info.plist */,
 				EAA18BE3221CE26300D60683 /* NewsArticles.xcdatamodeld */,
+				EA30B31E22206A7700D8E69B /* StacticArticleJSON.json */,
 			);
 			path = NewsArticles;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA18BF4221CE26800D60683 /* NewsArticlesTests.swift */,
+				EA30B31A222063AE00D8E69B /* WebAPITests.swift */,
 				EAA18BF6221CE26800D60683 /* Info.plist */,
 			);
 			path = NewsArticlesTests;
@@ -245,6 +251,7 @@
 				EAA18BF7221CE26800D60683 /* Sources */,
 				EAA18BF8221CE26800D60683 /* Frameworks */,
 				EAA18BF9221CE26800D60683 /* Resources */,
+				EA30B3202220A06100D8E69B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA18BEA221CE26800D60683 /* LaunchScreen.storyboard in Resources */,
+				EA30B31F22206A7700D8E69B /* StacticArticleJSON.json in Resources */,
 				EAA18BE7221CE26800D60683 /* Assets.xcassets in Resources */,
 				EAA18BE2221CE26300D60683 /* Main.storyboard in Resources */,
 			);
@@ -325,6 +333,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA30B3202220A06100D8E69B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxcrun simctl uninstall booted com.vvse.toiletmap\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EAA18BD5221CE26300D60683 /* Sources */ = {
@@ -350,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA18BF5221CE26800D60683 /* NewsArticlesTests.swift in Sources */,
+				EA30B31B222063AE00D8E69B /* WebAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

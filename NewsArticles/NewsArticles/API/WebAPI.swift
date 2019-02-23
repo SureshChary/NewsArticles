@@ -11,6 +11,9 @@ import UIKit
 class WebAPI: NSObject {
     static let sharedInstance = WebAPI()
     
+    let privateKey = "RKMBZf5AAQlMbOU3BtdsZA97QDUxQkqh"
+    let baseUrlPath = "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key="
+
     private let sessionManager: URLSession = {
         let urlSessionConfiguration: URLSessionConfiguration = URLSessionConfiguration.default
         return URLSession(configuration: urlSessionConfiguration, delegate: nil, delegateQueue: nil)
@@ -22,9 +25,8 @@ class WebAPI: NSObject {
     
     func fetchFeaturedArticles(completion: @escaping ([Result], Error?) -> ()) {
         
-        let articlesUrl = URL(string: "http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=RKMBZf5AAQlMbOU3BtdsZA97QDUxQkqh")
-        
-        URLSession.shared.dataTask(with:URLRequest(url:articlesUrl!) ) { (data, response, error) in
+        let articlesUrl = URL(string: baseUrlPath+privateKey)!        
+        URLSession.shared.dataTask(with:URLRequest(url:articlesUrl) ) { (data, response, error) in
             
             guard error == nil else {
                 print("Error in network response! \(String(describing: error?.localizedDescription))")
